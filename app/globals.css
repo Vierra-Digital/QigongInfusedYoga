@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: 'Georgia', 'Times New Roman', 'Times', serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  color: #1a3a52;
+  background: #ffffff;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+:root {
+  --primary-blue: #7db8d3;
+  --light-blue: #a8d5e8;
+  --lighter-blue: #d4e9f4;
+  --lightest-blue: #e8f4fa;
+  --dark-blue: #5a9bb8;
+  --darker-blue: #4a7a91;
+  --text-dark: #1a3a52;
+  --text-medium: #4a7a91;
+  --text-light: #6b8fa3;
+  --white: #ffffff;
+  --cream: #faf9f7;
+}
+
