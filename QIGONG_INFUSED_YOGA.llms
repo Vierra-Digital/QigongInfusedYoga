@@ -1,0 +1,397 @@
+# Qigong Infused Yoga - LLMS Context File
+
+## Project Overview
+
+**Qigong Infused Yoga®** is a Next.js website for weekly online Qigong classes focused on nervous system healing, trauma recovery, and holistic wellness. The site offers free Sunday classes via Zoom and provides educational content about the connection between physical tension, pain, and the nervous system.
+
+**Purpose**: To help individuals release anxiety, soften chronic tension, unwind trauma patterns, and reconnect with their bodies through gentle Qigong and Yoga practices.
+
+**Instructor**: Lynne Nicole Smith
+
+---
+
+## Brand Identity & Voice
+
+### Brand Voice
+- **Calming and Gentle**: Language should evoke peace, safety, and softness
+- **Professional yet Approachable**: Educational but accessible, never clinical or intimidating
+- **Empowering**: Focus on hope, healing, and personal agency
+- **Body-Positive**: Honoring the body's wisdom and protective responses
+- **Trauma-Informed**: Acknowledging interconnectedness of physical, mental, and emotional wellbeing
+
+### Key Messaging Themes
+- Nervous system regulation and healing
+- Trauma-informed movement and breathwork
+- Gentle, accessible practices for all bodies
+- Connection between tension, pain, and survival responses
+- Body's natural capacity for healing and regulation
+
+### Content Guidelines
+- **No emojis**: Clean, professional text-only presentation
+- **Trademark**: Always include ® after "Qigong Infused Yoga®"
+- **Capitalization**: 
+  - Section titles: Title Case
+  - List items: Capitalize Each Word (e.g., "Tight Shoulders", "Lower Back Tension")
+  - Benefits lists: Capitalize Each Word (e.g., "Release Anxiety", "Soften Chronic Tension")
+- **Punctuation**: Use periods in descriptions for "What You'll Experience" boxes
+
+---
+
+## Design System
+
+### Color Palette
+```css
+/* Light Blue Calming Theme */
+--primary-blue: #5a9bb8;
+--dark-blue: #4a7c94;
+--light-blue: #e8f4f8;
+--lighter-blue: #f0f8fa;
+--accent-blue: #7db8d1;
+--white: #ffffff;
+--text-dark: #2c3e50;
+--text-medium: #5a6c7d;
+```
+
+### Typography
+- **Font Family**: `'Georgia', 'Times New Roman', 'Times', serif` (yoga-appropriate serif font)
+- **Headings**: Bold, serif, generous line-height
+- **Body Text**: Readable serif, 1.6-1.7 line-height
+- **Hierarchy**: Clear size progression using `clamp()` for responsive scaling
+
+### Layout Principles
+- **Spacing**: Generous whitespace for breathing room
+- **Alignment**: Left-aligned text in hero section; varied in content sections
+- **Sections**: Clear visual separation with background color alternation
+- **Cards**: Rounded corners (20px), subtle shadows, light borders
+- **Responsive**: Mobile-first approach with breakpoints at tablet and desktop
+
+---
+
+## Technical Architecture
+
+### Stack
+- **Framework**: Next.js 14.2.35+ (App Router)
+- **Language**: TypeScript
+- **Styling**: CSS Modules (`*.module.css`)
+- **Images**: Next.js `next/image` for optimization
+- **Animation**: CSS animations + Intersection Observer API
+
+### Project Structure
+```
+/app
+  /components
+    ScrollAnimations.tsx    # Scroll-triggered animations
+  page.tsx                  # Main page component
+  page.module.css           # Page styles
+  globals.css               # Global styles & CSS variables
+  layout.tsx                # Root layout with metadata
+/public
+  /images
+    logo.webp              # Main logo (100x100px in nav)
+    lynne.png              # Instructor photo
+    testimonials-zoom.jpg  # Student testimonials grid
+    energeticconnectiontosun.jpg  # Survival mode section
+    qigongatlabryinth-1080x623.webp  # Tension/pain section
+```
+
+### Key Components
+
+#### ScrollAnimations Component
+- Client component (`'use client'`)
+- Uses Intersection Observer for scroll-triggered animations
+- Adds `animate-in` class when elements enter viewport
+- Observes sections, cards, and testimonials
+- Initializes after DOM ready (50ms timeout)
+
+---
+
+## Content Sections
+
+### 1. Header/Navigation
+- **Logo**: 100px × 100px, left-aligned
+- **Navigation**: About | Classes | Contact (no text next to logo)
+- **Height**: Compact (0.5rem padding)
+- **Behavior**: Smooth scroll to anchors
+
+### 2. Hero Section
+- **Title**: Two-line "Start Your Sunday<br />With Qigong"
+- **Subheadline**: Value proposition about nervous system healing
+- **CTA Button**: "Join Free Class + Free Healing Video" (no "Get" or "Receive")
+- **Details**: Times below button ("Sundays • 10–11am EST • Live on Zoom")
+- **Alignment**: Left-aligned content
+- **Animations**: Staggered fadeInUp (0.2s, 0.4s, 0.6s, 0.8s delays)
+
+### 3. Why Tension and Pain Are Linked to Your Nervous System
+- **Layout**: Two-column (image left, content right, vertically centered)
+- **Image**: `qigongatlabryinth-1080x623.webp`
+- **Content**: Educational text explaining nervous system connection
+- **List**: Capitalized items (e.g., "Muscle Bracing", "Inflammation", "Shallow Breathing")
+
+### 4. Is Your Nervous System Stuck in Survival Mode?
+- **Layout**: Two-column (image/caption left, content right)
+- **Image**: `energeticconnectiontosun.jpg` with caption below
+- **Caption Text**: "When stress, anxiety, or unresolved experiences accumulate..."
+- **Paragraph Placement**: 
+  - First paragraph under image caption (left column)
+  - Border + solution text on right column (moved up)
+- **List**: Capitalized "Common signs include:" items
+
+### 5. What You'll Experience Each Sunday
+- **Layout**: 4-column grid (desktop) → 3 (medium) → 2 (tablet) → 1 (mobile)
+- **Cards**: 8 experience cards with:
+  - Number (01-08)
+  - Title
+  - Description (with periods)
+- **Animation**: fadeInUp on scroll
+
+### 6. Free Gift Section
+- **Title**: "Free Gift When You Register" (no "Your")
+- **Button**: "Access Your Free Gift" (no "Receive")
+- **Benefits**: Capitalized list items with arrows (→)
+- **Design**: Shimmer animation on background
+
+### 7. Meet Your Instructor
+- **Image**: `lynne.png` (no hover enlargement due to whitespace)
+- **Layout**: Image left, text right
+- **Content**: About Lynne Nicole Smith
+
+### 8. What Students Are Saying
+- **Image**: `testimonials-zoom.jpg` (max-width: 700px, centered)
+- **Testimonials**: Quotation mark icon/card styling
+- **Design**: Clean testimonial cards with proper quote mark placement
+
+### 9. Final CTA Section
+- **Title**: "Calm Your Nervous System. Ease Your Tension. Reclaim Your Peace."
+- **Content**: 
+  - "You deserve relief. You deserve softness. You deserve to feel at home in your body again."
+  - Button: "Join Free Class + Free Healing Video"
+- **No Text**: 
+  - ❌ "Begin your week with healing and hope—right from home."
+  - ❌ "Your healing journey can start with one gentle Sunday."
+- **Design**: Gradient background with radial overlay
+
+### 10. Footer
+- **Layout**: Two main columns
+  - Left: Brand description ("Qigong Infused Yoga®" + tagline)
+  - Right: Three grouped columns (Connect | Social | Resources)
+- **Columns**: 
+  - Connect: About, Classes, Contact
+  - Social: Facebook, Instagram, YouTube
+  - Resources: Training, Video Subscription, Blog
+- **Spacing**: Controlled gap between grouped columns (not between left column and grouped columns)
+
+---
+
+## Image Guidelines
+
+### Image Files
+- All images in `/public/images/`
+- Use WebP format when possible (`.webp`) for optimization
+- JPG acceptable (`.jpg`)
+- PNG for images requiring transparency (`.png`)
+
+### Image Usage
+- **Logo** (`logo.webp`): 100×100px in navigation
+- **Instructor** (`lynne.png`): Maintain aspect ratio, no hover scale
+- **Testimonials** (`testimonials-zoom.jpg`): Max-width 700px, centered
+- **Section Images**: Full-width within their columns, rounded corners, shadows
+
+### Next.js Image Component
+```tsx
+<Image
+  src="/images/filename.ext"
+  alt="Descriptive alt text"
+  width={WIDTH}
+  height={HEIGHT}
+  className={styles.className}
+/>
+```
+
+---
+
+## Animation & UX Principles
+
+### Animation Strategy
+- **First Load**: Staggered hero animations (fadeInUp with delays)
+- **Scroll Animations**: Intersection Observer triggers `animate-in` class
+- **Smooth Scrolling**: CSS `scroll-behavior: smooth` on html element
+- **Transitions**: Subtle, easing transitions on interactive elements
+
+### Keyframe Animations
+```css
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+```
+
+### Animation Timing
+- Hero elements: 0.8s duration, staggered 0.2s delays
+- Cards: 0.6s fadeInUp on scroll
+- Sections: 0.8s fadeInUp on viewport entry
+- Transitions: 0.3-0.4s ease for interactive elements
+
+### Performance
+- Use CSS transforms over layout properties
+- Avoid animating opacity + layout simultaneously when possible
+- Sections visible by default (no initial opacity: 0 for better initial render)
+
+---
+
+## Code Conventions
+
+### CSS Modules
+- All component styles in `*.module.css` files
+- Class names: camelCase (e.g., `heroTitle`, `ctaPrimary`)
+- Use CSS variables from `globals.css` for colors
+
+### TypeScript
+- Type-safe props and components
+- Use Next.js types (e.g., `Image` component props)
+
+### Component Patterns
+- Server components by default (React Server Components)
+- Client components only when needed (`'use client'` directive)
+- Keep animations in dedicated client component (`ScrollAnimations`)
+
+### Naming Conventions
+- Components: PascalCase (`ScrollAnimations.tsx`)
+- CSS classes: camelCase (`heroTitle`)
+- Files: lowercase with hyphens or camelCase matching component
+
+---
+
+## Content Updates Guidelines
+
+### When Adding/Editing Content:
+
+1. **Capitalization Rules**:
+   - Section headings: Title Case
+   - List items in symptoms/benefits: Capitalize Each Word
+   - Keep consistent with existing patterns
+
+2. **Button Text**:
+   - Primary CTA: "Join Free Class + Free Healing Video" (no "Get" or "Receive")
+   - Gift CTA: "Access Your Free Gift" (no "Receive")
+
+3. **Spacing**:
+   - Maintain generous whitespace
+   - Consistent padding/margins across similar sections
+   - Nav bar: 0.5rem vertical padding
+   - Footer: Controlled spacing within grouped columns
+
+4. **Lists**:
+   - Use periods in descriptions (e.g., "Calm anxiety and regulate the nervous system.")
+   - Capitalize all words in symptom/benefit lists
+   - Use arrows (→) for benefit lists in gift section
+
+---
+
+## Common Issues & Solutions
+
+### Visibility Issues
+- Sections should be visible by default (opacity: 1)
+- Animation adds `animate-in` class on scroll, but doesn't control initial visibility
+- Check CSS for any `opacity: 0` without proper animation triggers
+
+### Image Sizing
+- Testimonials image: max-width 700px, centered
+- Instructor image: No hover scale (prevents whitespace issue)
+- Section images: Full-width in their columns
+
+### Footer Spacing
+- Two main columns: left (brand) and right (grouped columns)
+- Spacing controlled with `gap` on `.footerColumnsGroup` (not between main columns)
+
+### Animation Performance
+- Use CSS transforms, not layout properties
+- Sections animate on viewport entry
+- Hero elements animate on first load with staggered delays
+
+---
+
+## Development Workflow
+
+### Running the Project
+```bash
+npm install          # Install dependencies
+npm run dev         # Start dev server (http://localhost:3000)
+npm run build       # Build for production
+npm start           # Start production server
+```
+
+### Key Files to Edit
+- **Content**: `app/page.tsx`
+- **Styles**: `app/page.module.css`
+- **Global Styles**: `app/globals.css`
+- **Animations**: `app/components/ScrollAnimations.tsx`
+- **Metadata**: `app/layout.tsx`
+
+### Testing Checklist
+- [ ] All images load correctly
+- [ ] Responsive design works (mobile, tablet, desktop)
+- [ ] Smooth scroll navigation
+- [ ] Animations trigger on scroll
+- [ ] Buttons have correct text (no "Get"/"Receive")
+- [ ] Lists properly capitalized
+- [ ] Footer spacing correct
+- [ ] No emojis in content
+- [ ] Trademark symbol (®) present where needed
+
+---
+
+## Future Considerations
+
+### Potential Enhancements
+- Form submission for class registration
+- Blog functionality
+- Video subscription portal
+- Training/workshop registration
+- Social media feed integration
+- Accessibility improvements (ARIA labels, keyboard navigation)
+- SEO optimization (meta tags, structured data)
+- Analytics integration
+
+### Maintenance Notes
+- Keep Next.js updated for security and performance
+- Monitor image sizes and optimize regularly
+- Test animations on various devices/browsers
+- Review and update content quarterly
+- Check for broken links and outdated information
+
+---
+
+## Contact & Resources
+
+**Brand**: Qigong Infused Yoga®
+**Instructor**: Lynne Nicole Smith
+**Class Times**: Sundays • 10–11am EST • Live on Zoom
+
+**Footer Links**:
+- Connect: About, Classes, Contact
+- Social: Facebook, Instagram, YouTube
+- Resources: Training, Video Subscription, Blog
+
+---
+
+*This LLMS file provides comprehensive context for working with the Qigong Infused Yoga website project. Keep it updated as the project evolves.*
