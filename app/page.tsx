@@ -98,7 +98,7 @@ export default function Home() {
               </div>
               <div className={styles.survivalInsight}>
                 <p className={styles.survivalSolution}>
-                  This class helps your nervous system shift from survival mode back into a state of ease and regulation.
+                  This trauma-informed class helps your nervous system shift from survival mode back into a state of ease and regulation.
                 </p>
               </div>
             </div>
