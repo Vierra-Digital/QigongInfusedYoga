@@ -129,10 +129,28 @@
 
 /* Hero Section */
 .hero {
+  position: relative;
   background: linear-gradient(135deg, var(--lightest-blue) 0%, var(--lighter-blue) 100%);
   padding: 6rem 0 5rem;
   text-align: left;
   animation: fadeIn 0.8s ease-out;
+  overflow: hidden;
+}
+
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(232, 244, 250, 0.75) 0%, rgba(212, 233, 244, 0.75) 100%);
+  z-index: 1;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
 }
 
 .heroTitle {

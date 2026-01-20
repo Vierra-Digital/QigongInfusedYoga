@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import styles from './page.module.css'
 import ScrollAnimations from './components/ScrollAnimations'
+import HeroVideo from './components/HeroVideo'
 
 export default function Home() {
   return (
@@ -30,6 +31,8 @@ export default function Home() {
 
       {/* SECTION 1 - HERO */}
       <section className={styles.hero}>
+        <HeroVideo />
+        <div className={styles.heroOverlay}></div>
         <div className={styles.container}>
           <h1 className={styles.heroTitle}>
             Start Your Sunday<br />With Qigong
