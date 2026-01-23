@@ -6,7 +6,7 @@
   height: 100%;
   z-index: 0;
   overflow: hidden;
-  filter: blur(8px);
+  filter: blur(4px);
   min-height: 100%;
 }
 
