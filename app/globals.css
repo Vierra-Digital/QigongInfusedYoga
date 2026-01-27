@@ -34,12 +34,14 @@ button {
 }
 
 :root {
-  --primary-blue: #7db8d3;
-  --light-blue: #a8d5e8;
-  --lighter-blue: #d4e9f4;
-  --lightest-blue: #e8f4fa;
-  --dark-blue: #5a9bb8;
-  --darker-blue: #4a7a91;
+  /* Middle blue from logo (extracted from logo.webp) */
+  --logo-aqua: #4bc1d3;
+  --primary-blue: #4bc1d3;
+  --light-blue: #7dd4df;
+  --lighter-blue: #b8e8ee;
+  --lightest-blue: #e3f6f8;
+  --dark-blue: #3ba8b8;
+  --darker-blue: #2e8a98;
   --text-dark: #1a3a52;
   --text-medium: #2d5a6f;
   --text-light: #6b8fa3;

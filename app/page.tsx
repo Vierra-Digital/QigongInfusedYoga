@@ -11,7 +11,7 @@ export default function Home() {
       <header className={styles.header}>
         <nav className={styles.nav}>
           <div className={styles.navContainer}>
-            <div className={styles.logoContainer}>
+            <a href="https://qigonginfusedyoga.com" className={styles.logoContainer} aria-label="Home">
               <Image
                 src="/images/logo.webp"
                 alt="Qigong Infused Yoga"
@@ -19,8 +19,9 @@ export default function Home() {
                 height={100}
                 className={styles.logoImage}
               />
-            </div>
+            </a>
             <div className={styles.navLinks}>
+              <a href="https://qigonginfusedyoga.com">Home</a>
               <a href="#about">About</a>
               <a href="#classes">Classes</a>
               <a href="#contact">Contact</a>
