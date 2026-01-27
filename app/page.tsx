@@ -50,6 +50,34 @@ export default function Home() {
         </div>
       </section>
 
+      {/* SECTION 1b - FREE CLASS + VIDEO */}
+      <section className={`${styles.section} ${styles.sectionAlt} ${styles.freeClassSection}`} id="free-class">
+        <div className={styles.container}>
+          <h2 className={styles.freeClassTitle}>
+            The First Start Your Sunday With Qigong Class Is Free
+          </h2>
+          <p className={styles.freeClassSubtext}>
+            Plus Instant Access To A Free 50 Minute Qigong Infused Yoga® Video
+          </p>
+          <div className={styles.freeClassVideoWrapper}>
+            <iframe
+              src="https://player.vimeo.com/video/1156285179"
+              className={styles.freeClassVideo}
+              allow="autoplay; fullscreen; picture-in-picture; encrypted-media"
+              allowFullScreen
+              frameBorder="0"
+              title="Free 50 minute Qigong Infused Yoga video"
+              style={{ border: 'none' }}
+            />
+          </div>
+          <div className={styles.freeClassCtaWrapper}>
+            <button className={styles.ctaPrimary}>
+              Join Free Class + Free Healing Video
+            </button>
+          </div>
+        </div>
+      </section>
+
       {/* SECTION 2 - PAIN POINTS */}
       <section className={styles.section} id="about">
         <div className={styles.container}>
