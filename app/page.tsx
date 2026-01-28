@@ -2,6 +2,7 @@ import Image from 'next/image'
 import styles from './page.module.css'
 import ScrollAnimations from './components/ScrollAnimations'
 import HeroVideo from './components/HeroVideo'
+import CtaButton from './components/CtaButton'
 
 export default function Home() {
   return (
@@ -41,9 +42,9 @@ export default function Home() {
           <p className={styles.heroSubheadline}>
             A free weekly nervous system healing class to help you release anxiety, soften chronic tension, and feel like yourself again.
           </p>
-          <button className={styles.ctaPrimary}>
+          <CtaButton className={styles.ctaPrimary}>
             Join Free Class + Free Healing Video
-          </button>
+          </CtaButton>
           <p className={styles.heroDetails}>
             Sundays • 10–11am EST • Live on Zoom
           </p>
@@ -71,9 +72,9 @@ export default function Home() {
             />
           </div>
           <div className={styles.freeClassCtaWrapper}>
-            <button className={styles.ctaPrimary}>
+            <CtaButton className={styles.ctaPrimary}>
               Join Free Class + Free Healing Video
-            </button>
+            </CtaButton>
           </div>
         </div>
       </section>
@@ -243,9 +244,9 @@ export default function Home() {
             </p>
           </div>
           <div className={styles.experienceCtaWrapper}>
-            <button className={styles.experienceCtaButton}>
+            <CtaButton className={styles.experienceCtaButton}>
               Join The Free Class
-            </button>
+            </CtaButton>
           </div>
         </div>
       </section>
@@ -292,9 +293,9 @@ export default function Home() {
               </p>
             </div>
             <div className={styles.giftCtaSection}>
-              <button className={styles.giftCtaButton}>
+              <CtaButton className={styles.giftCtaButton}>
                 Free Class Link + Video
-              </button>
+              </CtaButton>
             </div>
           </div>
         </div>
@@ -398,9 +399,9 @@ export default function Home() {
               <p className={styles.finalCtaLine}>You deserve to feel at home in your body again.</p>
             </div>
             <div className={styles.finalCtaButtonWrapper}>
-              <button className={styles.ctaPrimary}>
+              <CtaButton className={styles.ctaPrimary}>
                 Join Free Class + Free Healing Video
-              </button>
+              </CtaButton>
             </div>
           </div>
         </div>

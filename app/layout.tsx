@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import { SignupModalProvider } from './components/SignupModalContext'
 
 export const metadata: Metadata = {
   title: 'Start Your Sunday With Qigong | Qigong Infused Yoga',
@@ -13,7 +14,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <SignupModalProvider>{children}</SignupModalProvider>
+      </body>
     </html>
   )
 }
