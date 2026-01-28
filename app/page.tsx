@@ -21,12 +21,6 @@ export default function Home() {
                 className={styles.logoImage}
               />
             </a>
-            <div className={styles.navLinks}>
-              <a href="https://qigonginfusedyoga.com">Home</a>
-              <a href="#about">About</a>
-              <a href="#classes">Classes</a>
-              <a href="#contact">Contact</a>
-            </div>
           </div>
         </nav>
       </header>
