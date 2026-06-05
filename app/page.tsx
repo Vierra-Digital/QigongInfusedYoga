@@ -3,11 +3,13 @@ import styles from './page.module.css'
 import ScrollAnimations from './components/ScrollAnimations'
 import HeroVideo from './components/HeroVideo'
 import CtaButton from './components/CtaButton'
+import PromoBanner from './components/PromoBanner'
 
 export default function Home() {
   return (
     <main className={styles.main}>
       <ScrollAnimations />
+      <PromoBanner />
       {/* Header/Navigation */}
       <header className={styles.header}>
         <nav className={styles.nav}>
