@@ -310,10 +310,10 @@ export default function Home() {
             <div className={styles.aboutContent}>
               <div className={styles.lynneImageWrapper}>
                 <Image
-                  src="/images/lynne.png"
+                  src="/images/lynne.jpg"
                   alt="Lynne Nicole Smith"
-                  width={400}
-                  height={500}
+                  width={919}
+                  height={1024}
                   className={styles.lynneImage}
                 />
               </div>
